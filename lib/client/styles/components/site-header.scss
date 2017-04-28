@@ -1,0 +1,24 @@
+$site-header-height: 100px;
+
+.site-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  .component-image {
+    display: inline-block;
+    margin-left: $spacing-4;
+  }
+
+  .frozen {
+    background: $white;
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: $site-header-height;
+  }
+}

@@ -1,0 +1,14 @@
+.bio-section {
+  margin: 0 auto;
+
+  .component-mosaic {
+    padding: $spacing-6;
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    height: calc(100vh - 167px); // 47px hed section title + 20px section container padding-top + 100px sticky header
+    justify-content: center;
+  }
+}

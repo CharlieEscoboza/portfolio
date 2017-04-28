@@ -1,0 +1,39 @@
+@import '~normalize.css'; // original path '../../../node_modules/normalize.css' resolved by 'postcss-smart-import'
+@import './vars';
+@import './colors';
+@import './fonts';
+@import './mixins/utils';
+
+// Sections
+@import './sections/intro';
+@import './sections/bio';
+
+//Components
+@import './components/intro';
+@import './components/jumper';
+@import './components/navigation';
+@import './components/site-header';
+@import './components/social-follow';
+@import './components/sticky';
+
+.homepage {
+  background: $white;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.section {
+  min-height: 100vh;
+  padding-top: $spacing-6;
+
+  .component-section-title {
+    text-align: center;
+  }
+
+  &:nth-child(2n+2) {
+    background: $light-gray;
+  }
+}

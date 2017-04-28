@@ -1,0 +1,41 @@
+@keyframes bounce {
+  0% {bottom: 50px}
+  50% {bottom: 10px}
+  100% {bottom: 50px}
+}
+
+.componnet-jumper {
+  //-webkit-animation: bounce 1s linear 0s infinite reverse;
+  //-o-animation: bounce 1s linear 0s infinite reverse;
+  animation: bounce 1s linear 0s infinite reverse;
+  background: $white;
+  border-radius: 25px;
+  bottom: 50px;
+  display: inline-block;
+  height: 50px;
+  left: 50%;
+  position: fixed;
+  width: 50px;
+  //-webkit-transform: translate(-50%, 0);
+  //-moz-transform: translate(-50%, 0);
+  //-ms-transform: translate(-50%, 0);
+  //-o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+
+  .arrow {
+    border-bottom: 2px solid $black;
+    border-left: 2px solid $black;
+    display: inline-block;
+    height: $spacing-4;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: $spacing-4;
+    z-index: 1;
+    //-webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    //-moz-transform: translate(-50%, -50%) rotate(-45deg);
+    //-ms-transform: translate(-50%, -50%) rotate(-45deg);
+    //-o-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "webpage_resume",
+  "version": "1.0.0",
+  "description": "Portfolio page",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon ./lib/server/index.js --exec babel-node",
+    "dev": "set NODE_ENV='development'&&set EMAIL=ing.charlie.garcia@gmail.com&&set EMAIL_PASSWORD=26111986&& webpack --config webpack.config.js && npm run server",
+    "prod": "set NODE_ENV='production' && webpack -p --config webpack.config.js && npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "React",
+    "Sass"
+  ],
+  "author": "Charlie García",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "classnames": "^2.2.5",
+    "emailjs": "^1.0.8",
+    "express": "^4.14.1",
+    "hbs": "^4.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "nodemailer": "^3.1.5",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.0",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "normalize.css": "^5.0.0",
+    "postcss-loader": "^1.3.3",
+    "postcss-smart-import": "^0.6.9",
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.13.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-hot-middleware": "^2.16.1"
+  }
+}

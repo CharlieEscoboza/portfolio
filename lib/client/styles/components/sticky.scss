@@ -1,0 +1,8 @@
+.component-sticky {
+  position: relative;
+  width: 100%;
+
+  &.frozen {
+    position: fixed;
+  }
+}

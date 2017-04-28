@@ -1,0 +1,37 @@
+.component-social-follow {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  .social-follow-github {
+    background: url('./images/icons/github.svg') no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+    text-indent: 999999px;
+    width: 30px;
+  }
+
+  .social-follow-linkedIn {
+    background: url('./images/icons/linked-in.svg') no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+    text-indent: 999999px;
+    width: 30px;
+  }
+
+  .social-item {
+    margin: 0 $spacing-1;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
