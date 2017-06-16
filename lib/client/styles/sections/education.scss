@@ -1,0 +1,11 @@
+.component-educational-mosaic-item {
+  display: flex;
+  flex: 0 0 100%;
+  max-width: 100%;
+
+  @include respond-to(sm) {
+    flex: 0 0 33.33%;
+    flex-wrap: wrap;
+    max-width: 33.33%;
+  }
+}
