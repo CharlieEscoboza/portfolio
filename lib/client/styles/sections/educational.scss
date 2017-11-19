@@ -1,0 +1,101 @@
+.educational-section {
+  .component-mosaic {
+    @include respond-to(sm) {
+      padding: 0 $spacing-8;
+    }
+  }
+
+  .info {
+    align-items: center;
+    background: rgba($white, .95);
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    transition: height .3s, top .3s;
+    width: 100%;
+  }
+
+  .open {
+    height: calc(100% - 18px); // 18px Details button height
+    justify-content: center;
+    position: absolute;
+    top: $spacing-4;
+
+    .collapsible-button::after {
+      border-bottom: $spacing-1 solid transparent;
+      border-left: $spacing-1 solid transparent;
+      border-right: $spacing-1 solid transparent;
+      border-top: $spacing-1 solid $white;
+      top: 6px;
+    }
+  }
+
+  .component-educational-mosaic-item {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    margin-bottom: $spacing-7;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @include respond-to(sm) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include respond-to(md) {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    @include respond-to(lg) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .main-content {
+      text-align: center;
+    }
+
+    .component-image {
+      width: 100%;
+    }
+
+    .course {
+      margin-bottom: $spacing-8;
+    }
+  }
+
+  .collapsible-button {
+    align-self: flex-end;
+    background: transparent;
+    border: 0;
+    padding: 0 $spacing-5 0 0;
+    position: absolute;
+    top: -#{$spacing-4};
+
+    &::before {
+      background: $red;
+      content: '';
+      display: inline-block;
+      height: 18px;
+      position: absolute;
+      right: 0;
+      width: 18px;
+    }
+
+    &::after {
+      border-bottom: $spacing-1 solid $white;
+      border-left: $spacing-1 solid transparent;
+      border-right: $spacing-1 solid transparent;
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 4px;
+      top: 6px;
+    }
+  }
+}
