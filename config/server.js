@@ -1,5 +1,1 @@
-/**
- * Created by Charlie on 11/26/2016.
- */
-
-module.exports.port = 3000;
+module.exports.port = 8080;
