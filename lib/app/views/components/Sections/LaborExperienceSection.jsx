@@ -40,7 +40,7 @@ const LaborExperienceSection = ({items = []}) => {
   const labors = items.map(prerenderItems);
 
   return (
-    <div className="labor-experience-section section">
+    <div id="#laboral_experience" className="labor-experience-section section">
       <SectionTitle disableUrl={true} title="Labor Experience"/>
       <Mosaic items={labors} />
     </div>
