@@ -8,18 +8,22 @@ class NavigationItem extends React.Component {
 
   constructor(props){
     super(props);
-    // this._moveScroll.bind(this);
+    this._moveScroll.bind(this);
   }
 
 
-  // _moveScroll(){
-  //   const node = document.getElementById(this.props.item.link);
-  //
-  //   if (node) {
-  //     const sectionTop = node.getBoundingClientRect().top;
-  //     window.scrollTo(0, sectionTop);
-  //   }
-  // }
+  _moveScroll(evt){
+    evt.preventDefault();
+    const node = document.getElementById(evt.target.getAttribute('href'));
+    const sectionTop = node ? node.getBoundingClientRect().top : 0;
+
+    if (node && (Math.floor(sectionTop) - 100)) {
+      console.log('Node location', sectionTop);
+      console.log('window location', window.innerHeight);
+
+      window.scrollTo(0, sectionTop - 100);
+    }
+  }
 
   /**
    * Render NavigationItem Component
@@ -28,7 +32,7 @@ class NavigationItem extends React.Component {
   render() {
     return (
       <li className="navigation-item">
-        <a className="navigation-link" href={this.props.item.link} >
+        <a className="navigation-link" href={this.props.item.link} onClick={this._moveScroll} >
           {this.props.item.label}
         </a>
       </li>
