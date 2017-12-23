@@ -2,7 +2,6 @@
  * Created by Charlie on 12/3/2016.
  */
 
-import * as _ from 'lodash';
 import classnames from 'classnames';
 import React from 'react';
 import Mosaic from '../Mosaic.jsx';
@@ -42,7 +41,7 @@ class Content extends React.Component {
 
 
 const prerenderItem = (item) => {
-  return _.assign({}, item, {content: <Content item={item} />});
+  return Object.assign({}, item, {content: <Content item={item} />});
 };
 
 

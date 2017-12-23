@@ -2,7 +2,6 @@
  * Created by Charlie on 12/3/2016.
  */
 
-import * as _ from 'lodash';
 import React from 'react';
 import SectionTitle from '../SectionTitle';
 import Mosaic from '../Mosaic';
@@ -11,7 +10,7 @@ import Mosaic from '../Mosaic';
 const prerenderContent = (item) => {
   const content = <p className="skill-level">{item.level}</p>;
 
-  return _.assign({}, item, {content: content});
+  return Object.assign({}, item, {content: content});
 };
 
 
