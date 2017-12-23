@@ -2,7 +2,6 @@
  * Created by Charlie on 12/3/2016.
  */
 
-import * as _ from 'lodash';
 import React from 'react';
 import Image from '../Image';
 import SectionTitle from '../SectionTitle';
@@ -15,12 +14,24 @@ const getContent = (item) => {
   return (
     <div>
       <Image alt={logo.alt} src={logo.src} />
-      <p className="company-name">{item.companyName}</p>
+      <p className="company-name">
+        <strong>
+          {item.companyName}
+        </strong>
+      </p>
       <p className="company-description">{item.description}</p>
-      <p className="position">{item.position}</p>
-      <p className="position-description">{item.positionDescription}</p>
-      <p className="start-date">{`Start date: ${item.startDate}`}</p>
-      <p className="end-date">{`End date: ${item.endDate || 'Current'}`}</p>
+      <p className="position">
+        <strong>Role: </strong>{`${item.role}`}
+      </p>
+      <p className="position-description">
+        <strong>Role description: </strong> {`${item.roleDescription}`}
+      </p>
+      <p className="start-date">
+        <strong>Start date: </strong>{`${item.startDate}`}
+      </p>
+      <p className="end-date">
+        <strong>End date: </strong>{`${item.endDate || 'Current'}`}
+      </p>
     </div>
   );
 };
@@ -28,7 +39,7 @@ const getContent = (item) => {
 
 const prerenderItems = (item) => {
   const content = getContent(item);
-  return _.assign({}, item, {content: content});
+  return Object.assign({}, item, {content: content});
 };
 
 

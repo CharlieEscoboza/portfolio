@@ -1,0 +1,14 @@
+.labor-experience-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .component-mosaic {
+    text-align: center;
+    width: 100%;
+
+    @include respond-to(lg) {
+      width: 40%;
+    }
+  }
+}
