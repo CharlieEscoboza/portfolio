@@ -1,0 +1,63 @@
+.contact-section {
+  .form {
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+  }
+
+  label,
+  .submit {
+    @include respond-to(sm) {
+      font-size: 18px;
+    }
+  }
+
+  .name,
+  .email,
+  .message {
+    padding: 5px;
+    width: 100%;
+  }
+
+  fieldset {
+    border: 0;
+    margin: 0 0 5px;
+    padding: 0;
+  }
+
+  .submit {
+    background-color: $light-sky-blue;
+    border: 0;
+    border-radius: 10px;
+    color: $white;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+
+  .main-wrapper {
+
+    @include respond-to(sm) {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .wrapper,
+  .message-fieldset {
+    @include respond-to(sm) {
+      width: 48%;
+
+      > fieldset:first-child {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
