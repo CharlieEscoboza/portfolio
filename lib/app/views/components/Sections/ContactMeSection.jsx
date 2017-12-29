@@ -63,20 +63,24 @@ class ContactMeSection extends React.Component {
     return (
       <div id={this.props.sectionLink} className='contact-section section'>
         <SectionTitle disableUrl={true} title="Contact Me" />
-        <form id="contactForm" onSubmit={this._handleSubmit} >
-          <fieldset>
-            <label htmlFor="name">Name: </label>
-            <input name='name' id='name' type='text' className='name' onChange={this._handleChange('name')} />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="email">Email: </label>
-            <input name='email' id='email' type='text' className='email' onChange={this._handleChange('email')} />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="message">Message: </label>
-            <textarea name='message' id='message' cols='30' rows='10' className='message' onChange={this._handleChange('message')} />
-          </fieldset>
-          <button type='submit'>{this.props.submitLabel}</button>
+        <form className="form" id="contactForm" onSubmit={this._handleSubmit} >
+          <div className="main-wrapper">
+            <div className="wrapper">
+              <fieldset>
+                <label htmlFor="name">Name </label>
+                <input name='name' id='name' type='text' className='name' onChange={this._handleChange('name')} />
+              </fieldset>
+              <fieldset>
+                <label htmlFor="email">Email </label>
+                <input name='email' id='email' type='text' className='email' onChange={this._handleChange('email')} />
+              </fieldset>
+            </div>
+            <fieldset className="message-fieldset">
+              <label htmlFor="message">Message </label>
+              <textarea name='message' id='message' cols='30' rows='10' className='message' onChange={this._handleChange('message')} />
+            </fieldset>
+          </div>
+          <button className="submit" type='submit'>{this.props.submitLabel}</button>
         </form>
       </div>
     );
