@@ -42,7 +42,6 @@
     "babel-preset-react": "^6.22.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
-    "file-loader": "^0.10.0",
     "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
     "normalize.css": "^5.0.0",
@@ -50,6 +49,7 @@
     "postcss-smart-import": "^0.6.9",
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.6.2",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-hot-middleware": "^2.16.1"
   }
