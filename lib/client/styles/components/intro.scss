@@ -1,21 +1,20 @@
 .intro-component {
-  background: rgba(255,255,255, .3);
+  background: rgba($white, .3);
   border: 2px solid $black;
   border-radius: 40px;
   margin: 60px 0;
-  padding: 100px;
   position: relative;
   text-align: center;
+
+  @include respond-to(sm) {
+    padding: 100px;
+  }
 
   .photo {
     border: 2px solid $black;
     border-radius: 50%;
     position: absolute;
     top: 0;
-    -webkit-transform: translate(-50%, -50px);
-    -moz-transform: translate(-50%, -50px);
-    -ms-transform: translate(-50%, -50px);
-    -o-transform: translate(-50%, -50px);
     transform: translate(-50%, -50px);
   }
 

@@ -22,7 +22,7 @@
   .email,
   .message {
     padding: 5px;
-    width: 100%;
+    width: calc(100% - 20px);
   }
 
   fieldset {

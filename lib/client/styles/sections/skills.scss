@@ -1,0 +1,107 @@
+.skills-section {
+  .component-mosaic {
+    justify-content: space-between;
+  }
+
+  .component-image {
+    width: 100%;
+  }
+
+  .component-mosaic-item {
+    align-items: center;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+    max-width: 100%;
+    padding-bottom: $spacing-7;
+    position: relative;
+    width: 100%;
+
+    @include respond-to(sm) {
+      flex: 0 0 49%;
+      max-width: 49%;
+    }
+
+    @include respond-to(md) {
+      flex: 0 0 33%;
+      margin-bottom: 0;
+      max-width: 33%;
+    }
+
+    @include respond-to(lg) {
+      flex: 0 0 24%;
+      max-width: 24%;
+    }
+
+    &:hover,
+    &:focus {
+      .content {
+        @include respond-to(md) {
+          bottom: auto;
+          opacity: 1;
+          top: 0;
+          z-index: 0;
+        }
+      }
+    }
+
+    &::after {
+      background-color: $darkgray;
+      bottom: 0;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      position: absolute;
+      width: 95%;
+
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .content {
+    align-items: center;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+
+    @include respond-to(md) {
+      background: rgba($white, .95);
+      bottom: -100%;
+      height: 100%;
+      opacity: 0;
+      right: auto;
+      top: 100%;
+      transition: opacity .5s, top .3s;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .skill-level {
+      background-color: $white;
+      border-radius: 25px;
+      color: $limegreen;
+      font-size: 24px;
+      font-weight: bold;
+      height: 50px;
+      line-height: 50px;
+      margin: 0;
+      text-align: center;
+      width: 50px;
+
+      @include respond-to(md) {
+        border-radius: 50px;
+        font-size: 48px;
+        height: 100px;
+        line-height: 100px;
+        width: 100px;
+      }
+    }
+  }
+}

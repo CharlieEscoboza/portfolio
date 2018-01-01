@@ -22,8 +22,8 @@ const SkillsSection = ({skills, sectionLink}) => {
   const items = skills.map(prerenderContent);
 
   return (
-    <div id={sectionLink} className="team-member-section section">
-      <SectionTitle disableUrl={true} title="Skills" />
+    <div id={sectionLink} className="skills-section section">
+      <SectionTitle disableUrl={true} title="Skills Level" />
       <Mosaic items={items} />
     </div>
   );

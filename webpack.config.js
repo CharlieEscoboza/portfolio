@@ -30,7 +30,9 @@ module.exports = {
       },
       {
         test: /\.(jpg|svg)$/,
-        use: { loader: 'file-loader?name=[name].[ext]&publicPath=images/&outputPath=images/' }
+        use: {
+          loader: 'url-loader'
+        }
       },
     ]
   },
