@@ -1,9 +1,7 @@
-/**
- * Created by Charlie on 11/27/2016.
- */
-
 import React from 'react';
 
+import 'whatwg-fetch';
+import DefaultLayout from '../layout/DefaultLayout';
 import BioSection from '../components/Sections/BioSection';
 import ContactMeSection from '../components/Sections/ContactMeSection';
 import IntroSection from '../components/Sections/IntroSection';
@@ -19,19 +17,30 @@ import LaborExperienceSection from '../components/Sections/LaborExperienceSectio
  */
 class Homepage extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = { data: {} };
+  }
+
+  componentDidMount() {
+    fetch('/info').then(data => this.setState({data}));
+  }
+
   render() {
-    const data = this.props.data;
+    const { data } = this.state;
 
     return (
-      <div className="homepage" >
-        <IntroSection label={data.bio.label} presentation={data.bio.presentation} sectionId="intro"/>
-        <BioSection {...data.bio} sectionLink="#bio" />
-        <EducationSection courses={data.education.courses} sectionLink="#education" />
-        <SkillsSection skills={data.skills} sectionLink="#skills" />
-        <LaborExperienceSection items={data.laborExperience} />
-        <ContactMeSection sectionLink="#contact"/>
-        <Jumper />
-      </div>
+      <DefaultLayout title={this.props.title}>
+        <div className="homepage" >
+          <IntroSection label={data.bio.label} presentation={data.bio.presentation} sectionId="intro"/>
+          <BioSection {...data.bio} sectionLink="#bio" />
+          <EducationSection courses={data.education.courses} sectionLink="#education" />
+          <SkillsSection skills={data.skills} sectionLink="#skills" />
+          <LaborExperienceSection items={data.laborExperience} />
+          <ContactMeSection sectionLink="#contact"/>
+          <Jumper />
+        </div>
+      </DefaultLayout>
     );
   }
 }

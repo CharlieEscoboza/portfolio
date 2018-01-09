@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
+    'whatwg-fetch',
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
     './lib/client/scripts/index.js'
   ],
@@ -17,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$|\.js$/,
+        test: /\.jsx?$/,
         use: { loader: 'babel-loader' }
       },
       {
