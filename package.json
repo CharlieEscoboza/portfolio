@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon ./lib/server/index.js --exec babel-node",
-    "dev": "set NODE_ENV='development'&&set EMAIL=ing.charlie.garcia@gmail.com&&set EMAIL_PASSWORD=26111986&& webpack --config webpack.config.js && npm run server",
+    "dev": "export NODE_ENV='development' export EMAIL=ing.charlie.garcia@gmail.com export EMAIL_PASSWORD=26111986 && npm run server",
     "prod": "set NODE_ENV='production' && webpack -p --config webpack.config.js && npm run server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
