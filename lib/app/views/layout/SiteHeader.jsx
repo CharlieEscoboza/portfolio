@@ -2,16 +2,16 @@
  * Created by Charlie on 11/28/2016.
  */
 
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Image from '../components/Image';
-import Sticky from '../components/Sticky'
+const React = require('react');
+const Navigation = require('../components/Navigation');
+const Image = require('../components/Image');
+const Sticky = require('../components/Sticky');
 
 /**
  * Render SiteHeader Component
  *
  */
-export default class SiteHeader extends React.Component {
+class SiteHeader extends React.Component {
 
   render() {
     const bio = this.props.data.bio;
@@ -29,3 +29,5 @@ export default class SiteHeader extends React.Component {
     );
   }
 }
+
+module.exports = SiteHeader;

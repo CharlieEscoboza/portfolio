@@ -2,8 +2,8 @@
  * Created by Charlie on 12/4/2016.
  */
 
-import React from 'react';
-import License from '../components/License';
+const React = require('react');
+const License = require('../components/License');
 
 
 class SiteFooter extends React.Component {
@@ -21,4 +21,4 @@ class SiteFooter extends React.Component {
   }
 }
 
-export default SiteFooter;
+module.exports = SiteFooter;

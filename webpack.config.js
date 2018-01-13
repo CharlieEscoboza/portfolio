@@ -4,7 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
-    'whatwg-fetch',
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
     './lib/client/scripts/index.js'
   ],

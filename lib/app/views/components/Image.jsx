@@ -1,5 +1,6 @@
 const classnames = require('classnames');
 const React = require('react');
+const propTypes = require('prop-types');
 
 /**
  * Render Image Component
@@ -12,8 +13,8 @@ const Image = function ({className = '', src, alt}) {
 };
 
 Image.PropTypes = {
-  src: React.PropTypes.string.isRequired,
-  alt: React.PropTypes.string.isRequired
+  src: propTypes.string.isRequired,
+  alt: propTypes.string.isRequired
 };
 
 module.exports = Image;

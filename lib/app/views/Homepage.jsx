@@ -17,20 +17,11 @@ const LaborExperienceSection = require('./components/Sections/LaborExperienceSec
  */
 class Homepage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { data: {} };
-  }
-
-  componentDidMount() {
-    fetch('/info').then(data => this.setState({data}));
-  }
-
   render() {
     const { data } = this.props;
 
     return (
-      <DefaultLayout title={this.props.title}>
+      <DefaultLayout title={this.props.title} headerData={this.props.data} >
         <div className="homepage" >
           <IntroSection label={data.bio.label} presentation={data.bio.presentation} sectionId="intro"/>
           <BioSection {...data.bio} sectionLink="#bio" />
@@ -50,13 +41,15 @@ Homepage.defaultProps = {
   data: {
     bio: {
       label: '',
-      presentation: ''
+      presentation: '',
+      photo: {src: '', alt: ''}
     },
     education: {
       courses: []
     },
     skills: [],
-    laborExperience: []
+    laborExperience: [],
+    navigation: []
   }
 }
 

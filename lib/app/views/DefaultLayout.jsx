@@ -1,4 +1,6 @@
 const React = require('react');
+const SiteHeader = require('./layout/SiteHeader');
+const SiteFooter = require('./layout/SiteFooter');
 
 class DefaultLayout extends React.Component {
 
@@ -11,7 +13,9 @@ class DefaultLayout extends React.Component {
           <link rel="stylesheet" href="style.css" />
         </head>
         <body>
+          <SiteHeader data={this.props.headerData} />
           {this.props.children}
+          <SiteFooter />
         </body>
       </html>
     );
