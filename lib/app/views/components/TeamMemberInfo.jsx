@@ -1,10 +1,6 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import React,{Component} from 'react';
-import Image from './Image.jsx';
-import SocialFollow from './SocialFollow.jsx';
+const React = require('react');
+const Image = require('./Image');
+const SocialFollow = require('./SocialFollow');
 
 
 class TeamMemberInfo extends Component {
@@ -25,4 +21,4 @@ class TeamMemberInfo extends Component {
   }
 }
 
-export default TeamMemberInfo;
+module.exports = TeamMemberInfo;

@@ -1,10 +1,6 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import React from 'react';
-import EducationalMosaicItem from './EducationalMosaicItem';
-import MosaicItem from './MosaicItem';
+const React = require('react');
+const EducationalMosaicItem = require('./EducationalMosaicItem');
+const MosaicItem = require('./MosaicItem');
 
 
 /**
@@ -44,4 +40,4 @@ const Mosaic = ({className = '', items = [], theme = 'default'}) => {
 };
 
 
-export default Mosaic;
+module.exports = Mosaic;

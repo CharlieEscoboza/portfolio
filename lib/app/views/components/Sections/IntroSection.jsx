@@ -1,15 +1,11 @@
-/**
- * Created by Charlie on 12/2/2016.
- */
-
-import React from 'react';
-import Intro from '../Intro.jsx';
+const React = require('react');
+const Intro = require('../Intro');
 
 /**
  * Render IntroSection Component
  *
  */
-export default function IntroSection({label, presentation, sectionId = ''}) {
+function IntroSection({label, presentation, sectionId = ''}) {
 
   return (
     <div id={sectionId} className='intro-section section'>
@@ -17,3 +13,5 @@ export default function IntroSection({label, presentation, sectionId = ''}) {
     </div>
   );
 }
+
+module.exports = IntroSection;

@@ -1,8 +1,4 @@
-/**
- * Created by Charlie on 11/27/2016.
- */
-
-import React from 'react';
+const React = require('react');
 
 class NavigationItem extends React.Component {
 
@@ -36,4 +32,4 @@ class NavigationItem extends React.Component {
   }
 }
 
-export default NavigationItem;
+module.exports = NavigationItem;

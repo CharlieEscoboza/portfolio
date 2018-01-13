@@ -1,4 +1,4 @@
-import React from 'react';
+const React = require('react');
 
 class DefaultLayout extends React.Component {
 
@@ -17,4 +17,4 @@ class DefaultLayout extends React.Component {
   }
 }
 
-export default DefaultLayout;
+module.exports = DefaultLayout;

@@ -1,16 +1,13 @@
-/**
- * Created by Charlie on 3/4/2017.
- */
-
-import classnames from 'classnames';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { scrollMonitor, isBrowser } from '../../helpers';
+const classnames = require('classnames');
+const React = require('react');
+const ReactDOM = require('react-dom');
+const { scrollMonitor } = require('../../helpers/window');
+const { isBrowser } = require('../../helpers/browser');
 
 const IE_RE = /Windows.*Trident/g;
 
 
-export default class Sticky extends React.Component {
+class Sticky extends React.Component {
 
   constructor(props){
     super(props);
@@ -73,3 +70,5 @@ export default class Sticky extends React.Component {
     );
   }
 }
+
+module.exports = Sticky;

@@ -1,11 +1,7 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import React from 'react';
-import Image from '../Image';
-import SectionTitle from '../SectionTitle';
-import Mosaic from '../Mosaic';
+const React = require('react');
+const Image = require('../Image');
+const SectionTitle = require('../SectionTitle');
+const Mosaic = require('../Mosaic');
 
 
 const getContent = (item) => {
@@ -58,4 +54,4 @@ const LaborExperienceSection = ({items = []}) => {
   );
 };
 
-export default LaborExperienceSection;
+module.exports = LaborExperienceSection;

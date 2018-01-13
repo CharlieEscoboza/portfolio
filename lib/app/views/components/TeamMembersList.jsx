@@ -1,12 +1,8 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import React,{Component} from 'react';
-import TeamMemberInfo from './TeamMemberInfo.jsx';
+const React = require('react');
+const TeamMemberInfo = require('./TeamMemberInfo');
 
 
-class TeamMembersList extends Component {
+class TeamMembersList extends React.Component {
 
   constructor(props){
     super(props);
@@ -34,4 +30,4 @@ class TeamMembersList extends Component {
   }
 }
 
-export default TeamMembersList;
+module.exports = TeamMembersList;

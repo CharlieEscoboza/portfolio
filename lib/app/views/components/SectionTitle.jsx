@@ -1,11 +1,7 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import React,{Component} from 'react';
+const React = require('react');
 
 
-class SectionTitle extends Component {
+class SectionTitle extends React.Component {
 
   constructor(props){
     super(props);
@@ -40,4 +36,4 @@ SectionTitle.defaultProps = {
   title: ''
 };
 
-export default SectionTitle;
+module.exports = SectionTitle;

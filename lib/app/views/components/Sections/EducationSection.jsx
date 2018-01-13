@@ -2,10 +2,10 @@
  * Created by Charlie on 12/3/2016.
  */
 
-import classnames from 'classnames';
-import React from 'react';
-import Mosaic from '../Mosaic.jsx';
-import SectionTitle from '../SectionTitle.jsx';
+const classnames = require('classnames');
+const React = require('react');
+const Mosaic = require('../Mosaic');
+const SectionTitle = require('../SectionTitle');
 
 
 class Content extends React.Component {
@@ -60,4 +60,4 @@ const EducationSection = ({courses, sectionLink}) => {
   );
 };
 
-export default EducationSection;
+module.exports = EducationSection;

@@ -1,9 +1,5 @@
-/**
- * Created by Charlie on 11/27/2016.
- */
-
-import React from 'react';
-import NavigationItem from './NavigationItem.jsx';
+const React = require('react');
+const NavigationItem = require('./NavigationItem');
 
 
 class Navigation extends React.Component {
@@ -42,4 +38,4 @@ Navigation.defaultProps = {
   items: []
 };
 
-export default Navigation;
+module.exports = Navigation;

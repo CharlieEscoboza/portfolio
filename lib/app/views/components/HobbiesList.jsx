@@ -1,9 +1,5 @@
-/**
- * Created by Charlie on 3/8/2017.
- */
-
-import React from 'react';
-import Hobbie from './Hobbie';
+const React = require('react');
+const Hobbie = require('./Hobbie');
 
 
 const renderHobbie = (length) => {
@@ -25,4 +21,4 @@ const HobbiesList = ({items}) => {
   );
 };
 
-export default HobbiesList;
+module.exports = HobbiesList;

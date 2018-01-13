@@ -1,16 +1,21 @@
-import React from 'react';
-import Mosaic from '../Mosaic';
-import HobbiesList from '../HobbiesList';
-import SectionTitle from '../SectionTitle';
-import SocialFollow from '../SocialFollow';
+const React = require('react');
+const Mosaic = require('../Mosaic');
+const HobbiesList = require('../HobbiesList');
+const SectionTitle = require('../SectionTitle');
+const SocialFollow = require('../SocialFollow');
 
 /**
  * Render BioSection Component
  *
  */
-const BioSection = ({birth, description, hobbies, name, nationality, sectionLink, social}) => {
-
-  return (
+const BioSection = ({
+  birth = '',
+  description = '',
+  hobbies = [],
+  name = '',
+  nationality = '',
+  sectionLink = '',
+  social = ''}) => (
     <div id={sectionLink} className='bio-section section' >
       <SectionTitle title="Bio" disableUrl={true} />
       <div className='container'>
@@ -26,7 +31,6 @@ const BioSection = ({birth, description, hobbies, name, nationality, sectionLink
       </div>
     </div>
   );
-};
 
 
-export default BioSection;
+module.exports = BioSection;

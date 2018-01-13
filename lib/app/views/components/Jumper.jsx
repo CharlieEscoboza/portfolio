@@ -1,5 +1,5 @@
-import React from 'react';
-import { scrollWindow } from '../../helpers/window';
+const React = require('react');
+const { scrollWindow } = require('../../helpers/window');
 
 
 class Jumper extends React.Component {
@@ -11,16 +11,18 @@ class Jumper extends React.Component {
 
 
   _handleJump() {
-    const sectionSelector = this.props.nextSection;
-    const node = document.querySelector(sectionSelector);
+    if (typeof window !== 'undefined') {
+      const sectionSelector = this.props.nextSection;
+      const node = document.querySelector(sectionSelector);
 
-    if (!node) {
-      console.warn('There is no node to move');
-      return;
+      if (!node) {
+        console.warn('There is no node to move');
+        return;
+      }
+
+      const nodeTopPosition = node.getBoundingClientRect().top;
+      scrollWindow(0, nodeTopPosition);
     }
-
-    const nodeTopPosition = node.getBoundingClientRect().top;
-    scrollWindow(0, nodeTopPosition);
   }
 
 
@@ -42,4 +44,4 @@ Jumper.defaultProps = {
 };
 
 
-export default Jumper;
+module.exports = Jumper;

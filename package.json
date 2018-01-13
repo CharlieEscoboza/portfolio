@@ -4,7 +4,7 @@
   "description": "Portfolio page",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon ./lib/server/index.js --exec babel-node",
+    "server": "nodemon ./lib/server/index.js",
     "dev": "export NODE_ENV='development' export EMAIL=ing.charlie.garcia@gmail.com export EMAIL_PASSWORD=26111986 && npm run server",
     "prod": "set NODE_ENV='production' && webpack -p --config webpack.config.js && npm run server",
     "test": "echo \"Error: no test specified\" && exit 1"

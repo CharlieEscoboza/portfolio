@@ -1,9 +1,5 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import React from 'react';
-import Image from './Image';
+const React = require('react');
+const Image = require('./Image');
 
 /**
  * Get image content
@@ -50,4 +46,4 @@ const MosaicItem = ({content, dek = '', hed = '', image = {}, subHed = '', url =
   );
 };
 
-export default MosaicItem;
+module.exports = MosaicItem;

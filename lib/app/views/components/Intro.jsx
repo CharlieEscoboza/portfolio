@@ -1,15 +1,11 @@
-/**
- * Created by Charlie on 2/27/2017.
- */
-
-import React from 'react';
-import Image from './Image.jsx';
+const React = require('react');
+const Image = require('./Image');
 
 /**
  * Render Intro Component
  *
  */
-export default function Intro({description = '', presentation = ''}) {
+function Intro({description = '', presentation = ''}) {
 
   return (
     <div className="intro-component">

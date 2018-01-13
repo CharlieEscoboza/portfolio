@@ -1,4 +1,4 @@
-import React from 'react';
+const React = require('react');
 
 const SocialFollowItem = ({link, network}) => {
 
@@ -13,4 +13,4 @@ const SocialFollowItem = ({link, network}) => {
   );
 };
 
-export default SocialFollowItem;
+module.exports = SocialFollowItem;

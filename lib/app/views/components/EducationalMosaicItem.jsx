@@ -1,9 +1,5 @@
-/**
- * Created by Charlie on 3/8/2017.
- */
-
-import React from 'react';
-import Image from './Image';
+const React = require('react');
+const Image = require('./Image');
 
 
 /**
@@ -25,4 +21,4 @@ const EducationalMosaicItem = ({institution = {}, content, course = ''}) => {
   );
 };
 
-export default EducationalMosaicItem;
+module.exports = EducationalMosaicItem;

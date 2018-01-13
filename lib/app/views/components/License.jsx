@@ -1,8 +1,4 @@
-/**
- * Created by Charlie on 12/4/2016.
- */
-
-import React from 'react';
+const React = require('react');
 
 
 class License extends React.Component {
@@ -18,4 +14,4 @@ class License extends React.Component {
   }
 }
 
-export default License;
+module.exports = License;

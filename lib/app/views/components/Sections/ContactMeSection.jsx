@@ -2,9 +2,9 @@
  * Created by Charlie on 12/4/2016.
  */
 
-import React from 'react';
-import fetch from 'isomorphic-fetch';
-import SectionTitle from '../SectionTitle';
+const React = require('react');
+const fetch = require('isomorphic-fetch');
+const SectionTitle = require('../SectionTitle');
 
 
 class ContactMeSection extends React.Component {
@@ -91,4 +91,4 @@ ContactMeSection.defaultProps = {
   submitLabel: 'Send message'
 };
 
-export default ContactMeSection;
+module.exports = ContactMeSection;

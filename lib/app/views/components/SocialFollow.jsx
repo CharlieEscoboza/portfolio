@@ -1,10 +1,6 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import * as _ from 'lodash';
-import React from 'react';
-import SocialFollowItem from './SocialFollowItem';
+const _ = require('lodash');
+const React = require('react');
+const SocialFollowItem = require('./SocialFollowItem');
 
 
 const prerenderItems = (social, network) => {
@@ -29,4 +25,4 @@ const SocialFollow = ({items = {}}) => {
 };
 
 
-export default SocialFollow;
+module.exports = SocialFollow;

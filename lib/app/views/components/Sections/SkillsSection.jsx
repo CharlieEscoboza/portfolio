@@ -1,10 +1,6 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import React from 'react';
-import SectionTitle from '../SectionTitle';
-import Mosaic from '../Mosaic';
+const React = require('react');
+const SectionTitle = require('../SectionTitle');
+const Mosaic = require('../Mosaic');
 
 
 const prerenderContent = (item) => {
@@ -29,4 +25,4 @@ const SkillsSection = ({skills, sectionLink}) => {
   );
 };
 
-export default SkillsSection;
+module.exports = SkillsSection;

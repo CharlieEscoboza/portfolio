@@ -1,8 +1,4 @@
-/**
- * Created by Charlie on 11/28/2016.
- */
-
-import React from 'react';
+const React = require('react');
 
 class Logo extends React.Component {
 
@@ -49,4 +45,4 @@ Logo.defaultProps = {
   url: '/'
 };
 
-export default Logo;
+module.exports = Logo;

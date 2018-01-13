@@ -1,9 +1,5 @@
-/**
- * Created by Charlie on 12/3/2016.
- */
-
-import classnames from 'classnames';
-import React from 'react';
+const classnames = require('classnames');
+const React = require('react');
 
 /**
  * Render Image Component
@@ -20,4 +16,4 @@ Image.PropTypes = {
   alt: React.PropTypes.string.isRequired
 };
 
-export default Image;
+module.exports = Image;
