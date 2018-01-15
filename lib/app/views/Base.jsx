@@ -1,14 +1,9 @@
-/**
- * Created by Charlie on 11/28/2016.
- */
-
-import React,{Component} from 'react';
-import SiteHeader from '../layout/SiteHeader.jsx';
-import SiteFooter from '../layout/SiteFooter.jsx';
-import Homepage from './Homepage.jsx';
+const React = require('react');
+const DefaultLayout = require('./DefaultLayout');
+const Homepage = require('./Homepage');
 
 
-class Base extends Component {
+class Base extends React.Component {
 
   constructor(props){
     super(props);
@@ -26,11 +21,9 @@ class Base extends Component {
   render() {
 
     return (
-      <div>
-        <SiteHeader data={this.props.data}/>
-        {this._getPage()}
-        <SiteFooter />
-      </div>
+      <DefaultLayout title={this.props.title} >
+        <Homepage data={this.props.data} />
+      </DefaultLayout>
     );
   }
 }
@@ -39,4 +32,4 @@ Base.defaultProps = {
   contentType: 'Homepage'
 };
 
-export default Base;
+module.exports = Base;

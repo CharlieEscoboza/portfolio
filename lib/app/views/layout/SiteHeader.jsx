@@ -1,7 +1,3 @@
-/**
- * Created by Charlie on 11/28/2016.
- */
-
 const React = require('react');
 const Navigation = require('../components/Navigation');
 const Image = require('../components/Image');
