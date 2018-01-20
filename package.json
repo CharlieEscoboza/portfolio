@@ -4,9 +4,10 @@
   "description": "Portfolio page",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon ./lib/server/index.js --exec babel-node",
+    "dev:server": "nodemon ./lib/server/index.js --exec babel-node",
+    "server": "babel lib --out-dir build --copy-files",
     "dev": "export NODE_ENV='development' export EMAIL=ing.charlie.garcia@gmail.com export EMAIL_PASSWORD=26111986 && npm run server",
-    "prod": "set NODE_ENV='production' && webpack -p --config webpack.config.js && npm run server",
+    "prod": "set NODE_ENV='production' && npm run server && webpack -p --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -25,13 +26,17 @@
     "classnames": "^2.2.5",
     "emailjs": "^1.0.8",
     "express": "^4.14.1",
+    "express-react-views": "^0.10.4",
+    "file-loader": "^1.1.6",
     "hbs": "^4.0.1",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "nodemailer": "^3.1.5",
+    "prop-types": "^15.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",
@@ -49,7 +54,6 @@
     "postcss-smart-import": "^0.6.9",
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.6.2",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-hot-middleware": "^2.16.1"
   }

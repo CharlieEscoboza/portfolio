@@ -4,12 +4,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    './lib/client/scripts/index.js'
+    // 'webpack-hot-middleware/public?path=/__webpack_hmr&timeout=20000',
+    './lib/public/index.js'
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build/public'),
     publicPath: '/'
   },
   devtool: "source-map",
@@ -17,21 +17,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$|\.js$/,
-        use: { loader: 'babel-loader' }
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader?importLoaders=2!postcss-loader!sass-loader',
-          publicPath: 'build'
+          publicPath: 'build/public'
         })
       },
       {
         test: /\.(jpg|svg)$/,
         use: {
-          loader: 'url-loader'
+          loader: 'file-loader',
+          options: {
+            publicPath: '../',
+            useRelativePath: true
+          }
         }
       },
     ]
@@ -41,12 +47,12 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin({
-      filename: 'style.css',
+      filename: 'styles/style.css',
       disable: false,
       allChunks: true
     })
   ],
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js']
   }
 };
