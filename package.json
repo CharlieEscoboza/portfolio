@@ -6,8 +6,9 @@
   "scripts": {
     "dev:server": "nodemon ./lib/server/index.js --exec babel-node",
     "server": "babel lib --out-dir build --copy-files",
-    "dev": "export NODE_ENV='development' export EMAIL=ing.charlie.garcia@gmail.com export EMAIL_PASSWORD=26111986 && npm run server",
-    "prod": "set NODE_ENV='production' && npm run server && webpack -p --config webpack.config.js",
+    "dev": "export NODE_ENV='development' && webpack --config ./webpack/webpack.dev.config.js && npm run dev:server",
+    "prod": "export NODE_ENV='production' && npm run server && webpack -p --config ./webpack/webpack.prod.config.js && node ./build/server/index.js",
+    "clear": "rm -rf ./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -24,6 +25,7 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "classnames": "^2.2.5",
+    "dotenv": "^4.0.0",
     "emailjs": "^1.0.8",
     "express": "^4.14.1",
     "express-react-views": "^0.10.4",
@@ -35,6 +37,7 @@
     "prop-types": "^15.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "uglifyjs-webpack-plugin": "^1.1.6",
     "webpack": "^2.2.1",
     "whatwg-fetch": "^2.0.3"
   },
