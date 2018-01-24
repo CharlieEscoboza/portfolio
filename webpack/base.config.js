@@ -4,12 +4,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
-    // 'webpack-hot-middleware/public?path=/__webpack_hmr&timeout=20000',
     './lib/public/index.js'
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build/public'),
+    path: path.resolve(__dirname, '../build/public'),
     publicPath: '/'
   },
   devtool: "source-map",
@@ -27,7 +26,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader?importLoaders=2!postcss-loader!sass-loader',
-          publicPath: 'build/public'
+          publicPath: '../build/public'
         })
       },
       {
