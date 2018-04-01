@@ -1,18 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: [
-    './lib/public/index.js'
-  ],
+  entry: './lib/public/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '../build/public'),
     publicPath: '/'
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   target: 'web',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -23,18 +22,17 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader?importLoaders=2!postcss-loader!sass-loader',
-          publicPath: '../build/public'
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader?importLoaders=2!postcss-loader!sass-loader'
+        ]
       },
       {
         test: /\.(jpg|svg)$/,
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: '../',
+            name: '[name].[ext]',
             useRelativePath: true
           }
         }
@@ -45,10 +43,11 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new ExtractTextPlugin({
-      filename: 'styles/style.css',
-      disable: false,
-      allChunks: true
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "styles/style.css",
+      chunkFilename: "[id].css"
     })
   ],
   resolve: {
